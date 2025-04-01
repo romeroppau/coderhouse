@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css"> 
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+
+    <title>Document</title>
+
+</head>
+<body>
+    <h1 class="sublime">Sublime</h1>
+    <header>
+        <p>Lo artesanal, en tu mesa</p>
+        <!--Funcionalidades de boostrap-->
+        <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <div class="container-fluid ">
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto">
+                  <li class="nav-item">
+                    <a class="nav-link" href="../index.html">Inicio</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="productos.html">Productos</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="sobre_nosotros.html">Sobre Nosotros</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="ayuda.html">Ayuda</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="contacto.html">Contacto</a>
+                  </li>
+                  <!--Boton de opciones para abajo
+                  <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                      Dropdown
+                    </a>
+                    <ul class="dropdown-menu">
+                      <li><a class="dropdown-item" href="#">Action</a></li>
+                      <li><a class="dropdown-item" href="#">Another action</a></li>
+                      <li><hr class="dropdown-divider"></li>
+                      <li><a class="dropdown-item" href="#">Something else here</a></li>
+                    </ul>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link disabled" aria-disabled="true">Disabled</a>
+                  </li>-->
+                </ul>
+                <!-- Funcionalidad de buscar dentro de la pagina-->
+                <form class="d-flex" role="search">
+                  <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                  <button class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+                
+              </div>
+            </div>
+          </nav>
+        
+    </header>
+    
+    <main>
+        <h2 class="titulos m-3 p-3">Productos</h2>
+        <p class="text-center">Aquí encontrarás todo nuestro catálogo:</p>
+    
+        <!-- Sección con Grid de Bootstrap -->
+        <div class="container">
+            <div class="row">
+                <section id="pan_de_molde" class="col-lg-6 col-md-12">
+                    <h3><strong>Panes de Molde</strong></h3>
+                    <img class="imagenes" src="../multimedia/pan_de_molde.jpeg" alt="pan_de_molde" class="img-fluid">
+                    <p>Integral / Blanco</p>
+                    <p><strong>Precio: $3300</strong></p>
+                </section>
+    
+                <section id="ciabattas" class="col-lg-6 col-md-12">
+                    <h3><strong>Ciabattas</strong></h3>
+                    <img class="imagenes" src="../multimedia/ciabattas.jpeg" alt="ciabattas" class="img-fluid">
+                    <p>Integral / Blanco. Vienen de a 4 unidades.</p>
+                    <p><strong>Precio: $2500</strong></p>
+                </section>
+    
+                <section id="focaccia" class="col-lg-6 col-md-12">
+                    <h3><strong>Focaccias</strong></h3>
+                    <img class="imagenes" src="../multimedia/focaccia.jpeg" alt="focaccia" class="img-fluid">
+                    <p>Harina blanca / 12hs de fermentación</p>
+                    <p>Pueden ser de: Tomate + cebolla / Cebolla/ Especias.</p>
+                    <p><strong>Precio: $2500</strong></p>
+                </section>
+    
+                <section id="medialunas" class="col-lg-6 col-md-12">
+                    <h3><strong>Medialunas</strong></h3>
+                    <img class="imagenes" src="../multimedia/medialunas.jpeg" alt="medialunas" class="img-fluid">
+                    <p>72hs fermentación/ Manteca y harina de calidad/ Almibar de naranja</p>
+                    <p>Precio por docena:</p>
+                    <p><strong>Precio: $5000</strong></p>
+                </section>
+            </div>
+        </div>
+    </main>
+    
+    <footer>
+        <p>© 2025 SublimePanes/Ana</p>
+        <p>Contacto: <a class="enlaces" href="mailto:sublimepanes@gmail.com">sublimepanes@gmail.com</a></p>
+        <p>
+            <a class="enlaces" href="https://www.instagram.com/sublimepanes/">Nuestro Instagram</a>
+            <a class="enlaces" href="https://api.whatsapp.com/send?phone=542323558686&text=Hola%20Paula!%20Quer%C3%ADa%20consultarte%20por...">Nuestro WhatsApp</a>
+        </p>
+    </footer>
+</body>
+</html>

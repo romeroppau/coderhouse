@@ -1,0 +1,93 @@
+/* RESET */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* estilos de header */
+
+header{
+    background-color: #2B2B2B ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+header img{
+    width: 30%;
+}
+
+header nav ul{
+    list-style: none;
+    color: #E6E6DD;
+    display: flex;
+    gap: 15px;
+    padding-right: 25px;
+}
+
+/* estilos de main */
+
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+main .textos{
+    text-align: center;
+}
+
+main .textos h1 span{
+    display: block;
+    color: #522528;
+}
+
+main .textos .boton{
+    background-color: #2B2B2B;
+    display: inline-block;
+    padding: 10px;
+    color: whitesmoke;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    margin-top: 10px;
+    box-shadow: 10px 5px 8px black;
+}
+
+main .img{
+    display: flex;
+    justify-content: center;
+}
+
+main .img img{
+    width: 50%;
+    filter: drop-shadow(10px 10px 10px black);
+}
+
+/* estilos de section */
+
+section{
+    background-color: #2B2B2B;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    flex-wrap: wrap;
+}
+
+section div{
+    color: whitesmoke;
+    text-align: center;
+}
+
+section div img{
+    width: 30%;
+}
+
+/* estilos de footer */
+
+footer{
+    text-align: center;
+}

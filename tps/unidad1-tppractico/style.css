@@ -1,0 +1,182 @@
+
+*{
+    box-sizing: border-box;
+}
+/*fuentes*/
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre&display=swap');
+
+/*-- Estilos generales --*/
+main {
+    font-family: 'Abhaya Libre', serif;
+    color: #3c3838;
+}
+
+/*-- Texto y encabezados --*/
+p{  
+    font-size: 18px;
+    margin: 20px;
+}
+h3{
+    color: #3c3838;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+}
+.color{
+    background-color: #8d7e7e; /* Color de fondo */
+    color: #fff; /* Color del texto */
+    padding: 20px; /* Espaciado dentro del recuadro */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Efecto de transición */
+}
+.color:hover {
+    transform: translateY(-5px); /* Efecto de elevar el recuadro al pasar el mouse */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Sombra más intensa al pasar el mouse */
+}
+/* -- Encabezados y titulos -- */
+.sublime{
+    text-align: center;
+    font-family: 'Abhaya Libre',serif;
+    letter-spacing: 7px;
+    background-color: #3c3838;
+    color: #ffe5ae;
+    margin: 0;
+    padding: 0;
+}
+
+header{
+    text-align: center;
+    font-family: 'Abhaya Libre',serif;
+    background-color: #3c3838;
+    color: #ffe5ae;
+    margin: 0;
+    padding: 0;
+}
+
+.titulos{
+    color:#3c3838;
+    text-align: center;
+    font-family: 'Abhaya Libre',serif;
+    font-size: 2rem;
+    line-height: 30px;
+    letter-spacing: 5px;
+    font-size: 28px;    
+}
+
+footer p{
+    font-size: 15px;
+    text-decoration: none;
+    margin: 5px;
+}
+
+/* -- Enlaces y navegacion -- */
+.enlaces{
+    text-decoration: none;
+    color: #8d7e7e;
+}
+.enlaces:hover{
+    text-decoration: underline;
+    color: #3c3838;
+}
+.instagram{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    margin: 50px auto;
+    margin-top: 50px;
+    background-color: #8d7e7e;
+    border-radius: 15px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+}
+
+.instagram:hover {
+    transform: scale(1.05);
+}
+
+.instagram-media {
+    width: 70%;
+    border-radius: 15px;
+}
+/*contacto*/
+.card {
+    background-color: #f8f9fa;
+    border-radius: 8px;
+}
+
+button.btn {
+    border-radius: 50px;
+    padding: 10px 30px;
+}
+
+button.btn:hover {
+    background-color: #3c3838;
+    border-color: #ffe5ae;
+}
+
+/* -- Multimedia -- */
+.videos{
+    display: block;
+    margin: 10%;
+    border: 5px solid #3c3838;
+    border-radius: 15px; /* Bordes redondeados */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Sombra para dar profundidad */
+    width: 75%; /* Ajusta el video al 100% del ancho de su contenedor */
+    height: auto; /* Mantiene la proporción del video */
+    opacity: 0.7; /* Opacidad por defecto, cuando no se toca */
+
+}
+.videos:hover{
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño del video */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4); /* Sombra más intensa */
+    opacity: 1; /* saca opacidad */
+}
+.imagenes {
+    width: 50%; /* Asegura que las imágenes ocupen todo el ancho de su contenedor */
+    border-radius: 15px; /* Bordes redondeados para un efecto más elegante */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil para dar profundidad */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transición suave al hacer hover */
+    object-fit: cover; /* Hace que la imagen se ajuste bien al contenedor */
+}
+
+.imagenes:hover {
+    transform: scale(1.05); /* Aumenta ligeramente el tamaño de la imagen al hacer hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra más fuerte para un efecto de resaltar */
+}
+
+section {
+    margin-bottom: 30px; /* Espacio entre las secciones */
+    padding: 20px; /* Añadir algo de relleno alrededor del contenido */
+    background-color: #f9f9f9; /* Fondo claro para cada producto */
+    border-radius: 10px; /* Bordes redondeados en el contenedor */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Sombra sutil para dar profundidad */
+}
+
+/*Flexbox*/
+.navbar{
+    background-color: #a08c8c;
+}
+.navbar ul{
+    display: flex;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    /*text-align: center -> solo funciona en elem de tipo bloque para alinear texto o elem en linea*/
+    justify-content: center;/*centra los elem hijos de li horizontalmente dentro del ul*/
+}
+.navbar li{
+    margin: 0 15px;
+    
+}
+.navbar a{
+    color: #ffe5ae;
+    padding: 15px 20px;
+}
+
+/*portada*/
+header .portada{
+    width: 30%;
+}

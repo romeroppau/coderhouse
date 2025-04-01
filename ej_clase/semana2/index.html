@@ -1,0 +1,212 @@
+<!-- ctrl+k+c -> para comentar lo seleccionado -->
+
+<!DOCTYPE html>
+<html lang="en"> <!--define el lenguaje que va a envolver el contenido-->
+<head> <!--zona de configuracion-->
+    <meta charset="UTF-8"> <!--Define la codificación de caracteres del documento-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--name y content: Proporcionan información como la descripción de la página y las palabras clave.-->
+    <title>Mi primer sitio web</title> <!--como aparece en la pestana-->
+
+    <!--CSS-->
+    <link rel="stylesheet" href="style.css"> 
+    <!--Necesario para vincular el estilo-->
+
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+</head>
+<body> <!--Contenido visible-->
+    <header> <!--El header marca el encabezado, no genera un titulo-->
+        <h1> Mi primer sitio web en codigo</h1>
+        <h2>LUCAS SANTILLÁN TE AMO, SOS EL MEJOR NOVIO DEL MUNDO <3</h2>
+        <p>Hola, soy Ana. Este es mi primer pagina del curso. Bienvenidos😀​</p>
+        <!--p es una etiqueta-->
+        <nav> <!--Indice-->
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Sobre mi</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <!--Elementos en bloque-->
+        <!--Otros ej: div (caja), section, article, header, footer-->
+        <section>
+            <h2>Seccion principal</h2>
+            <p>Contenido de la seccion principal.</p>
+        </section>
+        
+        <!--Elementos en linea, son utilizados dentro de los elementos en bloque-->
+        <p>Este es un párrafo con un <a href="#">enlace</a> y algo de <strong>texto en negrita</strong>.</p>
+        <p>Otro párrafo con una <em>énfasis</em> en una palabra.</p>
+        <p>Imagen en línea: <img src="imagen.jpg" alt="Descripción de la imagen"></p>
+        <!--'alt' es util por si se rompe la imagen, se proyectara aquello que haya en el, y para las paginas de 
+        personas no videntes tambien se dictara dicho contenido. Debe decir lo esencial y descriptivo de la imagen-->
+
+        <!--Articulo-->
+        <article>
+            <h3>Articulo relevante</h3>
+            <p>Contenido del articulo.</p>
+        </article>
+        <!-- Jerarquia logica de encabezados
+        <body>
+            <h1>Título Principal</h1>
+            <h2>Subtítulo de la Sección</h2>
+            <p>Contenido de la sección...</p>
+            <h3>Subsección</h3>
+            <p>Contenido de la subsección...</p>
+            <h2>Otro Subtítulo de Sección</h2>
+            <p>Más contenido...</p>
+        </body> -->
+
+        <!--Lista ordenada-->
+        <label for="lista_ordenada">Lista ordenada:</label>
+        <ol>
+            <li>Batir</li>
+            <li>Cocinar</li>
+            <li>Comer</li>
+        </ol>
+        <!--Lista desordenada-->
+        <label for="lista_desordenada">Lista desordenada:</label>
+        <ul>
+            <li>Agua</li>
+            <li>Carne</li>
+            <li>Verduras</li>
+        </ul>
+        <!--Enlaces: absoluto, relativo e interno-->
+        <a href="https://google.com">Prensa</a>
+        <a href="servicios.html">Ver servicios</a>
+        <a href="#testimonios">Testimonios</a>
+        <!--Generar la seccion dentro de la pagina-->
+        <section if="Testimonios">
+            <p>Testimonios</p>
+        </section>
+
+        <!--Multimedia: videos y audio-->
+        <video src="(ruta_del_video)" controls ></video>
+        <audio src="(ruta_del_audio)" controls></audio>
+
+        <!--Tablas| Paea organizarnos o armar emails-->
+        <table>
+            <tr><!--Filas-->
+                <th>Nombre</th> <!--Encabezados-->
+                <th>Ciudad</th>
+                <th>Edad</th>
+            </tr>
+            <tr>
+                <td>Ana</td> <!--Celdas-->
+                <td>Buenos Aires</td>
+                <td>20</td>
+            </tr>
+        </table>
+
+        <!--Formularios-->
+        <form action="/submit" method="post"> <!--etiqueta contenedora-->
+            <!--Submit sera la URL donde enviaremos el formulario-->
+            <label for="nombre">Nombre:</label><!--los label son etiquetas-->
+            <input type="text" name="nombre" id="nombre"><!--el name y id son identif. para nosotros saber a que input del codigo pertenece 'nombre',
+            no genera ningun efecto vsual, es para una organizacion del codigo-->
+
+            <label for="password">Constrasena:</label>
+            <input type="password" name="password" id="password">
+            
+            <label for="mensaje">Mensaje:</label>
+            <textarea name="mensaje" id="mensaje"></textarea>
+
+            <label for="genero">Genero:</label>
+            <input type="radio" name="genero" id="genero">
+            <label for="">Mujer</label>
+            <input type="radio" name="genero" id="genero">
+            <label for="">Hombre</label>
+            <input type="radio" name="genero" id="genero">
+            <label for="">Prefiero no decirlo</label>
+
+            <label for="suscribe">Suscribirse:</label>
+            <input type="checkbox" name="suscribe" id="suscribe">
+
+            <label for="pais">Pais:</label>
+            <select name="pais" id="pais">
+                <option value="">Brasil</option>
+                <option value="">Argentina</option>
+                <option value="">Uruguay</option>
+            </select>
+
+            <label for="enviar">Enviar formulario:</label>
+            <input type="submit" name="enviar" id="enviar">
+        </form>
+
+        <!--BOX MODEL (Modificaciones en CSS)
+        display:block-->
+        <div class="block-element">Elemento de Bloque</div>
+        <p class="block-element">Este es un párrafo.</p>
+
+        <!--display:inline -> no comienzan nueva linea y solo ocupan el espacio necesario
+        no se puede aplicar margin, padding, height ni width.
+        Ej: <span>, <a>, <img>, <strong>, <em>-->
+        <span class="inline-element">Elemento en Línea</span>
+        <a href="#" class="inline-element">Enlace</a>
+
+        <!--display: incline-block ->combinacion entre elem de linea y bloque-->
+        <div class="inline-block-element">Elemento Inline-Block</div>
+
+        <!--PROPIEDADES DE POSICIONAMIENTO
+        position:static -> los elementos se posicionan segun el flujo normal del doc, sin afectar otros elem.-->
+        <div class="static-box">Elemento Estático</div>
+        <!--POSITION:RELATIVE-> Útil para desplazar un elemento ligeramente desde su posición original sin sacarlo del flujo del documento. -->
+        <div class="relative-box">Elemento Relativo</div>
+        <!--position:absolute -> Se usa para colocar un elemento en una ubicación exacta dentro de su contenedor posicionado.-->
+        <div class="container">
+            <div class="absolute-box">Elemento Absoluto</div>
+        </div>
+        <!--position: fixed -> Ideal para elementos que deben estar siempre visibles, como menús de navegación o botones de vuelta al inicio.-->
+        <div class="fixed-box">Elemento Fijo</div>
+        <!--position:sticky -> Útil para encabezados o menús que deben quedarse fijos después de desplazarse una cierta distancia.-->
+        <div class="sticky-container">
+            <div class="sticky-box">Elemento Sticky</div>
+            <p>Contenido de ejemplo...</p>
+        </div>
+
+        <!--FLEXBOX
+        display:flex-->
+        <div class="flex-container1">
+            <div>Item 1</div>
+            <div>Item 2</div>
+            <div>Item 3</div>
+        </div>
+        
+        <!--Flex items: order-> otra forma de organizar items-->
+        <div class="flex-container2">
+            <div class="item" style="order: 2;">Item 1</div>
+            <div class="item" style="order: 1;">Item 2</div>
+            <div class="item" style="order: 3;">Item 3</div>
+        </div>
+        <!--Flex-grow -> un item puede ocupar mas espacio disponible dentro del contenedor-->
+        <div class="flex-container3">
+            <div class="item2" style="flex-grow: 1;">Item 1</div>
+            <div class="item2" style="flex-grow: 2;">Item 2</div> <!--Sera + grande-->
+            <div class="item2" style="flex-grow: 1;">Item 3</div>
+        </div>
+        <!--Flex- shrink -> controla cuanto puede achicarse un item en relacion a los demas-->
+        <div class="flex-container4">
+            <div class="item3" style="flex-shrink: 1;">Item 1</div>
+            <div class="item3" style="flex-shrink: 3;">Item 2</div>
+            <div class="item3" style="flex-shrink: 1;">Item 3</div>
+        </div>
+        <!--Flex-basis -> establece el tamaño base de un ítem antes de aplicar flex-grow o flex-shrink.-->
+        <div class="flex-container5">
+            <div class="item4" style="flex-basis: 100px;">Item 1</div>
+            <div class="item4" style="flex-basis: 150px;">Item 2</div>
+            <div class="item4" style="flex-basis: 100px;">Item 3</div>
+        </div>
+        
+    </main>
+    <footer>
+        <p>© 2025 Mi Sitio Web/Ana</p>
+    </footer>
+</body>
+</html>
