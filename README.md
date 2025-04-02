@@ -1,2 +1,2 @@
 # CODERHOUSE
-Repositorio de ejercicios de clase y tps de mi página web
+Repositorio de mi trabajo entregable - Página web - Entrega n°2
