@@ -323,9 +323,11 @@ button.btn:hover {
 
 /* estilos de mobile y tablet*/
 @media (max-width: 990px) {
-
-    /*inicio*/
-    
+    .navbar-toggler-icon{
+        background-color: #ffe5ae; /* Fondo del botón */
+        border: none; /* Opcional: elimina el borde */
+        border-radius: 4px; /* Opcional: redondea un poco las esquinas */
+    }
 
     /*productos*/
     .productos-container {
