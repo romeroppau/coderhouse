@@ -1,0 +1,306 @@
+@import "utilidades/varlist";
+@import "utilidades/mixin";
+
+
+* {
+    box-sizing: border-box;
+}
+
+/* Fuentes */
+@import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre&display=swap');
+
+//Cuerpo principal y titulos
+.sublime {
+    @include linear-gradient;
+    text-align: center;
+    font-family: 'Abhaya Libre', serif;
+    background-color: nth($list-colores, 1);
+    color: nth($list-colores, 2);
+    margin: 0;
+    padding: 5px;
+}
+
+header {
+    text-align: center;
+    font-family: 'Abhaya Libre', serif;
+    background-color: nth($list-colores, 1);
+    color: nth($list-colores, 2);
+    margin: 0;
+    padding: 0;
+}
+
+.navbar {
+    background-color: nth($list-colores, 8) !important;
+
+    ul {
+        @include display(flex, center);
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    li {
+        margin: 0 15px;
+    }
+
+    a {
+        color: nth($list-colores, 3);
+        padding: 15px 20px;
+    }
+
+    .nav-link:hover {
+        color: nth($list-colores, 4) !important;
+    }
+}
+
+header .portada {
+    width: 30%;
+}
+
+.titulos {
+    color: nth($list-colores, 1);
+    text-align: center;
+    font-family: 'Abhaya Libre', serif;
+    font-size: 28px;
+    line-height: 30px;
+    letter-spacing: 5px;
+}
+
+main {
+    font-family: 'Abhaya Libre', serif;
+    color: nth($list-colores, 1);
+    background-color: nth($list-colores, 2);
+}
+
+p {
+    font-size: 18px;
+    margin: 20px;
+}
+
+.p-inicio {
+    font-size: 18px;
+    margin: 20px;
+    text-align: center;
+    background-color: rgba(nth($list-colores, 4), 0.25);
+    padding: 15px 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    @include display(inline-block, center);
+}
+
+h3 {
+    color: nth($list-colores, 1);
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+//Footer
+footer {
+    @include linear-gradient;
+    text-align: center;
+    font-family: 'Abhaya Libre', serif;
+    background-color: nth($list-colores, 1);
+    color: nth($list-colores, 2);
+    margin: 0;
+    padding: 10px;
+
+    .enlaces {
+        color: nth($list-colores, 2);
+    }
+
+    .enlaces:hover {
+        color: nth($list-colores, 1) !important;
+        text-decoration: none;
+    }
+}
+
+//Clases generales
+.color {
+    background-color: nth($list-colores, 3);
+    color: nth($list-colores, 1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+
+    &:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+}
+
+.enlaces {
+    text-decoration: none;
+    color: nth($list-colores, 6);
+
+    &:hover {
+        text-decoration: none;
+        color: nth($list-colores, 1);
+    }
+}
+
+.card {
+    background-color: nth($list-colores, 3) !important;
+    border-radius: 8px;
+}
+
+button.btn {
+    border-radius: 50px;
+    padding: 10px 30px;
+    background-color: nth($list-colores, 1);
+    border-color: nth($list-colores, 4);
+    color: nth($list-colores, 2);
+
+    &:hover {
+        background-color: nth($list-colores, 6);
+        border-color: nth($list-colores, 2);
+        color: nth($list-colores, 2);
+    }
+}
+
+.videos {
+    @include display(block, center);
+    
+    margin: auto;
+    border: 5px solid nth($list-colores, 1);
+    border-radius: 10px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+    opacity: 0.7;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+
+    &:hover {
+        transform: scale(1.05);
+        /* Aumenta ligeramente el tamaño del video */
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+        /* Sombra más intensa */
+        opacity: 1;
+    }
+}
+/* Definir la animación */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+} 
+
+.imagenes {
+    width: 50%;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    object-fit: cover;
+    
+    @include fadeIn(1.5s, ease-in);
+
+    &:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    }
+
+}
+
+//Productos
+.productos-container {
+    @include display(grid, center);
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+    max-width: 90%;
+    margin: auto;
+    padding: 40px 0;
+}
+
+//Contacto
+.btn-instagram,
+.btn-whatsapp,
+.btn-ubicacion {
+    @include display(inline-block, center);
+    padding: 10px 20px;
+    color: white;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 25px;
+    border: none;
+    transition: 0.3s;
+}
+
+.btn-instagram {
+    background: linear-gradient(45deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5);
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+.btn-whatsapp {
+    background-color: #25D366;
+
+    &:hover {
+        background-color: #1EBE5D;
+    }
+}
+
+.btn-ubicacion {
+    background-color: #4285F4;
+
+    &:hover {
+        background-color: #3367D6;
+    }
+}
+
+//Sobre nosotros
+.sobre-nosotros {
+    @include display(flex, center);
+    max-width: 100%;
+    margin: auto;
+    padding: 25px;
+
+    p {
+        text-align: center;
+        margin: 10%;
+        background-color: rgba(252, 245, 234, 0.7);
+        padding: 15px 20px;
+        border-radius: 10px;
+        @include display(inline-block, center);
+        box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    }
+}
+
+//Media querie
+@media (min-width: 990px) {
+    .navbar-toggler-icon {
+        background-color: nth($list-colores, 2);
+        border: none;
+        border-radius: 4px;
+    }
+
+    .productos-container {
+        @include display(flex, center);
+        flex-wrap: wrap;
+
+        section {
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+
+            img {
+                max-width: 100%;
+                margin-right: 10px;
+            }
+
+        }
+    }
+
+    .videos {
+        margin: 20px auto;
+        @include display(block, center);
+    }
+}
