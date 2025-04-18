@@ -1,36 +1,37 @@
 @import "utilidades/varlist";
 @import "utilidades/mixin";
 
-
 * {
     box-sizing: border-box;
 }
-
 /* Fuentes */
 @import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre&display=swap');
+
+// Tema general
+.tema-principal {
+    font-family: 'Abhaya Libre', serif;
+    background-color: nth($list-colores, 1);
+    color: nth($list-colores, 2);
+}
 
 //Cuerpo principal y titulos
 .sublime {
     @include linear-gradient;
     text-align: center;
-    font-family: 'Abhaya Libre', serif;
-    background-color: nth($list-colores, 1);
-    color: nth($list-colores, 2);
+    @extend .tema-principal;
     margin: 0;
     padding: 5px;
 }
 
 header {
     text-align: center;
-    font-family: 'Abhaya Libre', serif;
-    background-color: nth($list-colores, 1);
-    color: nth($list-colores, 2);
+    @extend .tema-principal;
     margin: 0;
     padding: 0;
 }
 
 .navbar {
-    background-color: nth($list-colores, 8) !important;
+    background-color: nth($list-colores, 8);
 
     ul {
         @include display(flex, center);
@@ -78,8 +79,7 @@ p {
 }
 
 .p-inicio {
-    font-size: 18px;
-    margin: 20px;
+    @extend p;
     text-align: center;
     background-color: rgba(nth($list-colores, 4), 0.25);
     padding: 15px 20px;
@@ -99,19 +99,17 @@ h3 {
 footer {
     @include linear-gradient;
     text-align: center;
-    font-family: 'Abhaya Libre', serif;
-    background-color: nth($list-colores, 1);
-    color: nth($list-colores, 2);
+    @extend .tema-principal;
     margin: 0;
     padding: 10px;
 
     .enlaces {
         color: nth($list-colores, 2);
-    }
 
-    .enlaces:hover {
-        color: nth($list-colores, 1) !important;
-        text-decoration: none;
+        &:hover {
+            color: nth($list-colores, 1) !important;
+            text-decoration: none;
+        }
     }
 }
 
@@ -161,7 +159,6 @@ button.btn {
 
 .videos {
     @include display(block, center);
-    
     margin: auto;
     border: 5px solid nth($list-colores, 1);
     border-radius: 10px;
@@ -174,13 +171,11 @@ button.btn {
 
     &:hover {
         transform: scale(1.05);
-        /* Aumenta ligeramente el tamaño del video */
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
-        /* Sombra más intensa */
         opacity: 1;
     }
 }
-/* Definir la animación */
+
 @keyframes fadeIn {
     from {
         opacity: 0;
@@ -190,7 +185,7 @@ button.btn {
         opacity: 1;
         transform: translateY(0);
     }
-} 
+}
 
 .imagenes {
     width: 50%;
@@ -198,17 +193,14 @@ button.btn {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     object-fit: cover;
-    
-    @include fadeIn(1.5s, ease-in);
+    animation: fadeIn 1.5s ease-in;
 
     &:hover {
         transform: scale(1.05);
         box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     }
-
 }
 
-//Productos
 .productos-container {
     @include display(grid, center);
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -218,7 +210,6 @@ button.btn {
     padding: 40px 0;
 }
 
-//Contacto
 .btn-instagram,
 .btn-whatsapp,
 .btn-ubicacion {
@@ -256,7 +247,6 @@ button.btn {
     }
 }
 
-//Sobre nosotros
 .sobre-nosotros {
     @include display(flex, center);
     max-width: 100%;
@@ -274,7 +264,6 @@ button.btn {
     }
 }
 
-//Media querie
 @media (min-width: 990px) {
     .navbar-toggler-icon {
         background-color: nth($list-colores, 2);
@@ -295,7 +284,6 @@ button.btn {
                 max-width: 100%;
                 margin-right: 10px;
             }
-
         }
     }
 

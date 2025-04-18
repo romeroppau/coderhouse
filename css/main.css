@@ -10,6 +10,17 @@
 8$color-navbar: #4b474769;
 9$color-texto-enlaces: #8d7e7e;
 10$color-texto-hover: #3c3838;*/
+/*
+1$color-principal: #3c3838;
+2$color-secundario: #a08c8c;
+3$color-acento: #ffe5ae;
+4$color-fondo: #f8e4b8;
+5$color-fondo-transparente: #f8e4b8bd;
+6$color-hover: #8d7e7e;
+7$color-hover-link: #e1d7d7;
+8$color-navbar: #4b474769;
+9$color-texto-enlaces: #8d7e7e;
+10$color-texto-hover: #3c3838;*/
 /* Definir la animación */
 @import url("https://fonts.googleapis.com/css2?family=Abhaya+Libre&display=swap");
 @keyframes fadeIn {
@@ -27,29 +38,29 @@
 }
 
 /* Fuentes */
+.tema-principal, footer, header, .sublime {
+  font-family: "Abhaya Libre", serif;
+  background-color: #3c3838;
+  color: #ffe5ae;
+}
+
 .sublime {
   margin-top: 200px;
   width: 100%;
   background-image: linear-gradient(to right, #3c3838, #ffe5ae);
   text-align: center;
-  font-family: "Abhaya Libre", serif;
-  background-color: #3c3838;
-  color: #ffe5ae;
   margin: 0;
   padding: 5px;
 }
 
 header {
   text-align: center;
-  font-family: "Abhaya Libre", serif;
-  background-color: #3c3838;
-  color: #ffe5ae;
   margin: 0;
   padding: 0;
 }
 
 .navbar {
-  background-color: rgba(75, 71, 71, 0.4117647059) !important;
+  background-color: rgba(75, 71, 71, 0.4117647059);
 }
 .navbar ul {
   display: flex;
@@ -88,14 +99,12 @@ main {
   background-color: #ffe5ae;
 }
 
-p {
+p, .p-inicio {
   font-size: 18px;
   margin: 20px;
 }
 
 .p-inicio {
-  font-size: 18px;
-  margin: 20px;
   text-align: center;
   background-color: rgba(160, 140, 140, 0.25);
   padding: 15px 20px;
@@ -117,9 +126,6 @@ footer {
   width: 100%;
   background-image: linear-gradient(to right, #3c3838, #ffe5ae);
   text-align: center;
-  font-family: "Abhaya Libre", serif;
-  background-color: #3c3838;
-  color: #ffe5ae;
   margin: 0;
   padding: 10px;
 }
@@ -186,13 +192,10 @@ button.btn:hover {
 }
 .videos:hover {
   transform: scale(1.05);
-  /* Aumenta ligeramente el tamaño del video */
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
-  /* Sombra más intensa */
   opacity: 1;
 }
 
-/* Definir la animación */
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -209,9 +212,7 @@ button.btn:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   object-fit: cover;
-  opacity: 0;
-  transform: translateY(20px);
-  animation: fadeIn 1.5s ease-in forwards;
+  animation: fadeIn 1.5s ease-in;
 }
 .imagenes:hover {
   transform: scale(1.05);
@@ -270,7 +271,7 @@ button.btn:hover {
   margin: auto;
   padding: 25px;
 }
-.sobre-nosotros p {
+.sobre-nosotros p, .sobre-nosotros .p-inicio {
   text-align: center;
   margin: 10%;
   background-color: rgba(252, 245, 234, 0.7);

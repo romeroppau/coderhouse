@@ -1,7 +1,9 @@
+@import "varlist";
+
 @mixin display($disp, $content) {
     display: $disp;
     justify-content: $content;
-}
+} 
 
 @mixin hover-sombra($scale, $opacidad) {
     transform: scale($scale);
@@ -12,7 +14,7 @@
 @mixin linear-gradient {
     margin-top: 200px;
     width: 100%;
-    background-image: linear-gradient(to right,nth($list-colores, 1), nth($list-colores, 2));
+    background-image: linear-gradient(to right, nth($list-colores, 1), nth($list-colores, 2));
 }
 /* Definir la animación */
 @mixin fadeIn($duration: 1s, $ease: ease-out) {
@@ -20,7 +22,7 @@
     transform: translateY(20px);
     animation: fadeIn $duration $ease forwards;
 }
-
+ 
 @keyframes fadeIn {
     from {
         opacity: 0;
