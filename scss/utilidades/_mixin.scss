@@ -3,6 +3,7 @@
 @mixin display($disp, $content) {
     display: $disp;
     justify-content: $content;
+    text-align: $content;
 } 
 
 @mixin hover-sombra($scale, $opacidad) {
