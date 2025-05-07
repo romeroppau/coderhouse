@@ -130,7 +130,7 @@ footer {
 .enlaces {
     text-decoration: none;
     color: nth($list-colores, 6);
-
+    align-items: center;
     &:hover {
         text-decoration: none;
         color: nth($list-colores, 1);
