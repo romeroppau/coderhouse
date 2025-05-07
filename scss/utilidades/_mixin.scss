@@ -4,24 +4,32 @@
     display: $disp;
     justify-content: $content;
     text-align: $content;
-} 
+}
 
 @mixin linear-gradient {
     width: 100%;
     background-image: linear-gradient(to right, nth($list-colores, 1), nth($list-colores, 2));
 }
+
+@mixin logo-dimension($size) {
+    $logo: logo-size($size);
+    width: map-get($logo, width);
+    height: map-get($logo, height);
+}
+
 /* Definir la animación */
 @mixin fadeIn($duration: 1s, $ease: ease-out) {
     opacity: 0;
     transform: translateY(20px);
     animation: fadeIn $duration $ease forwards;
 }
- 
+
 @keyframes fadeIn {
     from {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);

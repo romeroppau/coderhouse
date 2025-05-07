@@ -1,0 +1,4 @@
+@function logo-size($base-size) {
+    @return (width: $base-size,
+        height: auto);
+}
