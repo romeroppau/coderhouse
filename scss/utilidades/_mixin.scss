@@ -11,10 +11,11 @@
     background-image: linear-gradient(to right, nth($list-colores, 1), nth($list-colores, 2));
 }
 
-@mixin logo-dimension($size) {
-    $logo: logo-size($size);
-    width: map-get($logo, width);
-    height: map-get($logo, height);
+@mixin logo-dimension($max-height) {
+    max-height: $max-height;
+    width: auto;
+    height: auto;
+    object-fit: contain;
 }
 
 /* Definir la animación */

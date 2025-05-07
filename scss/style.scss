@@ -17,22 +17,15 @@
 
 //Cuerpo principal y titulos
 
-.navbar-brand img {
-    @include logo-dimension(120px);
-}
+.navbar-brand {
+    display: flex;
+    align-items: center;
+    padding: 0.25rem 0.5rem;
 
-.sublime {
-    text-align: center;
-    @extend .tema-principal;
-    margin: 0;
-    padding: 5px;
-}
-
-header {
-    text-align: center;
-    @extend .tema-principal;
-    margin: 0;
-    padding: 0;
+    img {
+        @include logo-dimension(50px);
+        display: block;
+    }
 }
 
 .navbar {
@@ -55,18 +48,38 @@ header {
     }
 }
 
-header .portada {
-    width: 30%;
+.sublime {
+    text-align: center;
+    @extend .tema-principal;
+    margin: 0;
+    padding: 5px;
+}
+
+header {
+    text-align: center;
+    @extend .tema-principal;
+    margin: 0;
+    padding: 0;
+
+    .portada {
+        width: 30%;
+    }
 }
 
 .titulos {
     color: nth($list-colores, 1);
     text-align: center;
-    font-family: 'Abhaya Libre', serif;
     font-size: 28px;
     line-height: 30px;
     letter-spacing: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
 }
+
+h3 {
+    @extend .titulos;
+}
+
 
 main {
     font-family: 'Abhaya Libre', serif;
@@ -89,12 +102,6 @@ p {
     @include display(inline-block, center);
 }
 
-h3 {
-    color: nth($list-colores, 1);
-    font-weight: bold;
-    text-align: center;
-    text-transform: uppercase;
-}
 
 //Footer
 footer {
@@ -178,18 +185,6 @@ button.btn {
     }
 }
 
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
 .imagenes {
     width: 50%;
     border-radius: 10px;
@@ -270,13 +265,25 @@ button.btn {
     }
 }
 
+//animaciones
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 // Media query para MOBILE y tablets
 @media (max-width: 990px) {
     #logo {
         @include logo-dimension(50px);
     }
-
+    
     .productos-container {
         display: flex;
         flex-direction: column;
@@ -301,14 +308,14 @@ button.btn {
 
 // Media query para DESKTOP (pantallas grandes)
 @media (min-width: 990px) {
+    #logo {
+        @include logo-dimension(100px);
+    }
+
     .navbar-toggler-icon {
         background-color: nth($list-colores, 2);
         border: none;
         border-radius: 4px;
-    }
-
-    #logo {
-        @include logo-dimension(100px);
     }
 
     .productos-container {
