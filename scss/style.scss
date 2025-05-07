@@ -4,6 +4,7 @@
 * {
     box-sizing: border-box;
 }
+
 /* Fuentes */
 @import url('https://fonts.googleapis.com/css2?family=Abhaya+Libre&display=swap');
 
@@ -20,6 +21,7 @@
     max-height: 60px;
     width: auto;
 }
+
 .sublime {
     text-align: center;
     @extend .tema-principal;
@@ -36,16 +38,18 @@ header {
 
 .navbar {
     @include linear-gradient;
-    
+
     ul {
         @include display(flex, center);
         list-style: none;
         padding: 0;
         margin: 0;
     }
+
     li {
         margin: 0 15px;
     }
+
     a {
         color: nth($list-colores, 3);
         padding: 15px 20px;
@@ -130,6 +134,7 @@ footer {
     text-decoration: none;
     color: nth($list-colores, 6);
     align-items: center;
+
     &:hover {
         text-decoration: none;
         color: nth($list-colores, 1);
@@ -179,6 +184,7 @@ button.btn {
         opacity: 0;
         transform: translateY(20px);
     }
+
     to {
         opacity: 1;
         transform: translateY(0);
@@ -198,6 +204,7 @@ button.btn {
         box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
     }
 }
+
 //Productos
 .productos-container {
     @include display(grid, center);
@@ -207,6 +214,7 @@ button.btn {
     margin: auto;
     padding: 40px 0;
 }
+
 //Contacto
 .btn-instagram,
 .btn-whatsapp,
@@ -244,6 +252,7 @@ button.btn {
         background-color: #3367D6;
     }
 }
+
 //Sobre Nosotros
 .sobre-nosotros {
     @include display(flex, center);
@@ -262,87 +271,77 @@ button.btn {
     }
 }
 
-@mixin respond-to($breakpoint) {
-    @if $breakpoint == mobile {
-      @media (max-width: $breakpoint-mobile) { @content; }
-    } @else if $breakpoint == tablet {
-      @media (min-width: $breakpoint-mobile + 1) and (max-width: $breakpoint-tablet) { @content; }
-    } @else if $breakpoint == desktop {
-      @media (min-width: $breakpoint-desktop) { @content; }
-    }
-  }
-  
 
-  @include respond-to(mobile) {
+// Media query para MOBILE (teléfonos y pantallas pequeñas)
+@media (max-width: 576px) {
     #logo {
-      max-height: 50px;
+        max-height: 50px;
+        width: auto;
+        object-fit: contain;
     }
-  }
-  
-  @include respond-to(tablet) {
-    #logo {
-      max-width: 80px;
-      height: auto;
-      object-fit: contain;
-    }
-  
+
     .productos-container {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: center;
-  
-      section {
-        width: 45%;
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-bottom: 20px;
-  
-        img {
-          width: 100%;
-          height: auto;
-          margin-right: 0;
+
+        section {
+            width: 90%;
+            margin-bottom: 20px;
+
+            img {
+                width: 100%;
+                height: auto;
+                margin-right: 0;
+            }
+
+            p {
+                text-align: center;
+            }
         }
-  
-        p {
-          text-align: center;
-        }
-      }
     }
-  }
-  
-  @include respond-to(desktop) {
-    #logo {
-      max-width: 100px;
-      height: auto;
-      object-fit: contain;
-    }
-  
-    .productos-container {
-      display: flex;
-      flex-wrap: wrap;
-  
-      section {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        margin-bottom: 20px;
-  
-        img {
-          max-width: 100%;
-          margin-right: 10px;
-        }
-  
-        p {
-          text-align: center;
-        }
-      }
-    }
-  
+}
+
+// Media query para DESKTOP (pantallas grandes)
+@media (min-width: 990px) {
     .navbar-toggler-icon {
-      background-color: nth($list-colores, 2);
-      border: none;
-      border-radius: 4px;
+        background-color: nth($list-colores, 2);
+        border: none;
+        border-radius: 4px;
     }
-  }
-  
+
+    #logo {
+        max-width: 100px;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .productos-container {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+
+        section {
+            width: 30%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-bottom: 20px;
+
+            img {
+                max-width: 100%;
+                height: auto;
+                margin-right: 10px;
+            }
+
+            p {
+                text-align: center;
+            }
+        }
+    }
+
+    .videos {
+        margin: 20px auto;
+        @include display(block, center); // Asegurate que este mixin esté bien definido
+    }
+}
