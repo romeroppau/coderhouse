@@ -272,8 +272,8 @@ button.btn {
 }
 
 
-// Media query para MOBILE (teléfonos y pantallas pequeñas)
-@media (max-width: 576px) {
+// Media query para MOBILE y tablets
+@media (max-width: 990px) {
     #logo {
         max-height: 50px;
         width: auto;
