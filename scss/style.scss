@@ -1,3 +1,11 @@
+//Reset
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
 @import "utilidades/varlist";
 @import "utilidades/mixin";
 
@@ -80,7 +88,6 @@ h3 {
     @extend .titulos;
 }
 
-
 main {
     font-family: 'Abhaya Libre', serif;
     color: nth($list-colores, 1);
@@ -101,6 +108,7 @@ p {
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
     @include display(inline-block, center);
 }
+
 
 
 //Footer
@@ -177,7 +185,7 @@ button.btn {
     height: auto;
     opacity: 0.7;
     transition: transform 0.3s ease, opacity 0.3s ease;
-
+    
     &:hover {
         transform: scale(1.05);
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
